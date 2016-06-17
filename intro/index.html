@@ -7,6 +7,7 @@
     <title>Untitled Document</title>
     <!-- Bootstrap -->
 	<link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -17,7 +18,7 @@
   </head>
   <body>
     <div class="container">
-      <ul class="nav nav-tabs">
+      <ul class="nav nav-tabs top-navi">
         <li role="presentation"><a href="../index.html">Home</a></li>
         <li role="presentation" class="active"><a href="#">入門</a></li>
         <li role="presentation"><a href="#">各種テクニック</a></li>
@@ -27,19 +28,28 @@
         <li role="presentation"><a href="#">WebGLを超えて</a></li>
         <li role="presentation"><a href="../glenv/index.html">WebGL環境情報</a></li>
       </ul>
-      <p>
-         WebGL入門者の方向けに、WebGL入門のラーニングパス全体をカバーしている、素晴らしい日本語サイトがあります。
-          @h_doxas さんという方が運営していらっしゃる、<a href="https://wgld.org">wgld.org</a>です。
-      	ここを見れば、まず大体の知識はカバーできると思います。
-          まずはこちらのサイトさんで学んでください。
-      </p>
-      <p>
-  		wgld.orgで基礎を学んだら、次はもう少しコアな話題に触れていきましょう。
-      </p>
-      <ul>
-          <li>「<a href="http://qiita.com/emadurandal/items/0bb83b545670475f51a3">GPU本来の性能を引き出すWebGL頂点データ作成法</a>」（当サイト管理人の@emadurandalが執筆しました） </li>
-          <li>「<a href="http://qiita.com/emadurandal/items/1812198d562bd1216c70">WebGLにおけるジオメトリインスタンシング（ANGLE_instanced_arrays）を丁寧に説明してみる</a>」（当サイト管理人の@emadurandalが執筆しました） </li>
-      </ul>
+      <div class="row">
+        <div class="col-md-12">
+          <p>
+             WebGL入門者の方向けに、WebGL入門のラーニングパス全体をカバーしている、素晴らしい日本語サイトがあります。
+              @h_doxas さんという方が運営していらっしゃる、<a href="https://wgld.org">wgld.org</a>です。
+            ここを見れば、まず大体の知識はカバーできると思います。
+              まずはこちらのサイトさんで学んでください。
+          </p>
+          <p>
+            wgld.orgで基礎を学んだら、次はもう少しコアな話題に触れていきましょう。
+          </p>
+          </div>
+		</div>
+
+        <div class="row">
+        <div class="col-md-12">
+          <ul>
+            <li>「<a href="http://qiita.com/emadurandal/items/0bb83b545670475f51a3">GPU本来の性能を引き出すWebGL頂点データ作成法</a>」（当サイト管理人の@emadurandalが執筆しました） </li>
+            <li>「<a href="http://qiita.com/emadurandal/items/1812198d562bd1216c70">WebGLにおけるジオメトリインスタンシング（ANGLE_instanced_arrays）を丁寧に説明してみる</a>」（当サイト管理人の@emadurandalが執筆しました） </li>
+          </ul>
+        </div>
+      </div>
     </div>
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="../js/jquery-1.11.3.min.js"></script>
