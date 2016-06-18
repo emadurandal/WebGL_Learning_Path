@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Untitled Document</title>
+    <title>WebGL Learning Path JP</title>
     <!-- Bootstrap -->
 	<link href="../css/bootstrap.css" rel="stylesheet">
     <link href="../css/main.css" rel="stylesheet">
@@ -29,27 +29,57 @@
         <li role="presentation"><a href="../glenv/index.html">WebGL環境情報</a></li>
       </ul>
       <div class="row">
-        <div class="col-md-12">
-          <p>
-             WebGL入門者の方向けに、WebGL入門のラーニングパス全体をカバーしている、素晴らしい日本語サイトがあります。
-              @h_doxas さんという方が運営していらっしゃる、<a href="https://wgld.org">wgld.org</a>です。
-            ここを見れば、まず大体の知識はカバーできると思います。
-              まずはこちらのサイトさんで学んでください。
-          </p>
-          <p>
-            wgld.orgで基礎を学んだら、次はもう少しコアな話題に触れていきましょう。
-          </p>
+        <div class="col-md-12 segment">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <p>
+                 WebGL入門者の方向けに、WebGL入門のラーニングパス全体をカバーしている、素晴らしい日本語サイトがあります。
+                  @h_doxas さんという方が運営していらっしゃる、<a href="https://wgld.org">wgld.org</a>です。
+                ここを見れば、まず大体の知識はカバーできると思います。
+                  まずはこちらのサイトさんで学んでください。
+              </p>
+              <p>
+                wgld.orgで基礎を学んだら、次は以下に紹介している、もう少しコアな話題に触れていきましょう。
+              </p>
+            </div>
           </div>
-		</div>
-
-        <div class="row">
-        <div class="col-md-12">
-          <ul>
-            <li>「<a href="http://qiita.com/emadurandal/items/0bb83b545670475f51a3">GPU本来の性能を引き出すWebGL頂点データ作成法</a>」（当サイト管理人の@emadurandalが執筆しました） </li>
-            <li>「<a href="http://qiita.com/emadurandal/items/1812198d562bd1216c70">WebGLにおけるジオメトリインスタンシング（ANGLE_instanced_arrays）を丁寧に説明してみる</a>」（当サイト管理人の@emadurandalが執筆しました） </li>
-          </ul>
         </div>
       </div>
+
+        <div class="row">
+          <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+              <a href="https://wgld.org"><img src="https://dummyimage.com/250x250/FF6666/ffffff.png&text=wgld.org"></a>
+              <div class="caption">
+                <h3><a href="https://wgld.org">wgld.org</a></h3>
+                <p>国内におけるWebGL普及活動の第一人者、@h_doxasさんが運営されているWebGL学習サイトです。</p>
+                <p>初めての人に向けた基礎的な内容から、より実践的なテクニックまで、幅広い情報を大量に公開されています。まずはこちらのサイトでWebGLの概要を掴むのが近道かと思います。</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+              <a href="http://qiita.com/emadurandal/items/0bb83b545670475f51a3"><img src="https://dummyimage.com/250x250/6666FF/ffffff.png&text=高速描画"></a>
+              <div class="caption">
+                <h3><a href="http://qiita.com/emadurandal/items/0bb83b545670475f51a3">GPU本来の性能を引き出すWebGL頂点データ作成法</a></h3>
+                <p>WebGLではGPUに与える頂点の作り方が色々あります。ただ漫然と作るのではなく、GPUの特性に合ったデータ構造で頂点データを作ることにより、パフォーマンスを引き上げることができます。</p>
+                <p>この記事では、インターリーブ頂点バッファという高効率な頂点データ作成方法について紹介するとともに、描画周りの様々なTipsや豆知識をふんだんに解説しています。</p>
+                <p>（当サイト管理人の@emadurandalが執筆しました）</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+              <a href="http://qiita.com/emadurandal/items/1812198d562bd1216c70"><img src="https://dummyimage.com/250x250/6666FF/ffffff.png&text=高速描画"></a>
+              <div class="caption">
+                <h3><a href="http://qiita.com/emadurandal/items/1812198d562bd1216c70">WebGLにおけるジオメトリインスタンシング</a></h3>
+                <p>WebGLを含めた多くの3D APIでは、描画命令の数を抑えることが高速化につながります。</p>
+                <p>この記事では、現在、ほとんどのブラウザでサポートされているWebGLのANGLE_instanced_arrays拡張を使って、一回の描画命令で何百何千もの3Dモデルを表示してしまう技について解説します。</p>
+                <p>（当サイト管理人の@emadurandalが執筆しました）</p>
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="../js/jquery-1.11.3.min.js"></script>
