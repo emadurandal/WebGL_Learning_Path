@@ -8,6 +8,7 @@
     <!-- Bootstrap -->
 	<link href="../css/bootstrap.css" rel="stylesheet">
     <link href="../css/main.css" rel="stylesheet">
+
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
@@ -21,9 +22,9 @@
         <li role="presentation"><a href="../index.html">Home</a></li>
         <li role="presentation"><a href="../intro/index.html">入門</a></li>
         <li role="presentation"><a href="../techniques/index.html">各種テクニック</a></li>
-        <li role="presentation" class="active"><a href="#">WebVR</a></li>
+        <li role="presentation"><a href="../webvr/index.html">WebVR</a></li>
         <li role="presentation"><a href="../troubleshoot/index.html">トラブルシューティング</a></li>
-        <li role="presentation"><a href="../shader/index.html">シェーダーで遊ぶ</a></li>
+        <li role="presentation" class="active"><a href="#">シェーダーで遊ぶ</a></li>
         <li role="presentation"><a href="#">WebGLを超えて</a></li>
         <li role="presentation"><a href="../glenv/index.html">WebGL環境情報</a></li>
       </ul>
@@ -32,8 +33,9 @@
           <div class="panel panel-default">
             <div class="panel-body">
               <p>
-                Oculus Rift、HTC ViveといったHMD（ヘッドマウントディスプレイ）を用いたVR（バーチャル・リアリティ）を実現するWeb規格、WebVR。
-                このページでは、WebGLとの併用も含めて情報をご紹介する予定です。
+                 GPU（グラフィックプロセッサ・いわゆるグラボ）における頂点処理とピクセル処理は、ある時期を境にソフトウェア処理になり、プログラマブルシェーダーとして3D開発者たちに解放されました。
+                 それ以降、WebGLやOpenGLといった3D APIから少し離れて、それらプログラマブルシェーダーの処理のみに注目した技術ノウハウも確立され、成長してきました。
+                  ここでは、そんなプログラマブルシェーダーに特化した情報を扱います。
               </p>
             </div>
           </div>
@@ -43,20 +45,21 @@
       <div class="row">
         <div class="col-sm-6 col-md-4">
           <div class="thumbnail">
-            <a href="https://developer.mozilla.org/ja/docs/Web/API/WebVR_API"><img src="https://dummyimage.com/250x250/FF6666/ffffff.png&text=WebVR"></a>
+            <a href="https://www.shadertoy.com"><img src="https://dummyimage.com/250x250/FF6666/ffffff.png&text=ShaderToy"></a>
             <div class="caption">
-              <h3><a href="https://developer.mozilla.org/ja/docs/Web/API/WebVR_API">WebVRについての詳細な日本語情報</a></h3>
-              <p>WebVRについて、おそらく現状で一番詳しい情報が載っています。概要から各種APIまで〜。</p>
-              <p>（@rootxさんによる翻訳記事です）</p>
+              <h3><a href="https://www.shadertoy.com">ShaderToy（シェーダー投稿・共有サービス）</a></h3>
+              <p>おそらく世界でも１、２を争うメジャーなシェーダー投稿・共有サービスがここです。</p>
+              <p>非常に技術レベルの高い人たちが腕を競っており、「本当にこれはWebGLで動いているのか」と目を疑うほどの素晴らしいデモにたくさん触れることができます。</p>
+              <p>そうした高度なデモサンプルを見て楽しむのもいいですが、それらのコードは複雑で、そこから学び取るのは難しいかもしれません。割とシンプルなデモから学ぶこともオススメです。</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="../js/jquery-1.11.3.min.js"></script>
 
-	<!-- Include all compiled plugins (below), or include individual files as needed --> 
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="../js/bootstrap.js"></script>
   </body>
 </html>
