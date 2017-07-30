@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WebGL Learning Path JP</title>
+    <!-- Bootstrap -->
+	<link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <ul class="nav nav-tabs top-navi">
+        <li role="presentation"><a href="../index.html">Home</a></li>
+        <li role="presentation"><a href="../intro/index.html">入門</a></li>
+        <li role="presentation"><a href="../techniques/index.html">各種テクニック</a></li>
+        <li role="presentation"><a href="../webvr/index.html">WebVR</a></li>
+        <li role="presentation"><a href="../troubleshoot/index.html">トラブルシューティング</a></li>
+        <li role="presentation" class="active"><a href="#">コンテンツを作る</a></li>
+        <li role="presentation"><a href="#">WebGLを超えて</a></li>
+        <li role="presentation"><a href="../glenv/index.html">WebGL環境情報</a></li>
+      </ul>
+      <div class="row">
+        <div class="col-md-12 segment">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <h2>WebGLで夢のようなコンテンツを作る</h2>
+              <p>みなさんがWebGLを始めたいと思った理由はなんでしょう？　もしかしたら、「市販のゲームに出て来るような、すごい映像コンテンツを作りたい」という人も多いかもしれません。</p>
+              <p>ですが、WebGLには、基本的には三角形（ポリゴン）を表示する機能しかありません。テクスチャという画像を三角形に貼り付ける、といった機能もありますが、少なくとも造形的な意味では、WebGLでは三角形を大量に組み合わせて、なんらかの形を表現するほかないのです。これは、WebGLに限らず、そのほかの多くの３D技術でも同じことが言えます。<br>
+              ですが、実際問題、そんな風に三角形を、自分で位置などプログラムで一つ一つ指定していくわけには、とてもいきませんね。</p>
+              <p>市販のゲームや映画などでは、あれほどまでにリアルな造形を、どのように実現しているのでしょうか？</p>
+              <p>いくつかの方法があります。</p>
+              <p>A. あらかじめ、三角形の組み合わせてで構成された基本形状（立方体、球、円錐、円柱など）をプログラム的に登録しておき、それを必要に応じて呼び出す。<br>
+                B. ３Dソフトで複雑な形状のモデルを作成し、それをファイルに書き出し、WebGLプログラムで読み込んで表示する。</p>
+              <p>A. が簡単ではありますが、しかしやはり基本的な形のものしかないので、作れるモデルの複雑さにも限界があります。（というか、人体など複雑なものはまず無理ですね）。<br>
+              キャラクターや動物などの、複雑な形状のモデルをWebGLで表示したいなら、まず間違いなくBの方法をとることになります（もっとも、３Dソフトで複雑なモデルを作り出す際、その取っ掛かりとしてAの基本形状から作業をスタートさせることも多いようです）。Bの方法でも、ファイル中に記録されているキャラクターや動物の形状は、大量の三角形の集まりとして記録されているのです。</p>
+              <p>3Dソフトには、たくさんの種類があります。Autodesk社「Maya」などのプロ御用達の何十万もするソフトから、「Blender」などオープンソースの無料で使えるものなど（Blenderは、無料という印象を良い意味で裏切る、素晴らしく高機能な３Dソフトです）、多岐に渡りますが、ここでは３Dソフトで作られたモデルデータが、すでに手元にあるものと仮定して話を進めます。</p>
+              <p>３Dデータを記録するファイル形式にはたくさんの種類があります。何れにしても、どれか一つ、あなたが使う３Dソフトが出力をサポートしていて、そしてWebGLで表示する際のファイル入力の処理を開発しやすいフォーマットを選ぶと良いです。このページでは、推奨するファイルフォーマットをいくつかご紹介します。<br>
+            </p>
+              <p>あなたがWebGLを使って作れる世界は、このページのノウハウによって、あなたが本来つくりたい「夢のような３Dコンテンツ」に少しでも近づけるはずです。</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <a href="https://www.shadertoy.com"><img src="https://dummyimage.com/250x250/FF6666/ffffff.png&text=ShaderToy"></a>
+            <div class="caption">
+              <h3><a href="https://www.shadertoy.com">今話題の3Dファイル形式「glTF」でWebGLの表現力を高めよう！</a></h3>
+              <p>glTFはWebGL規格を策定しているKhronosという業界標準化団体が策定、普及を推進している新しい３Dファイルフォーマットです。特に、JavaScript＆WebGLでの利用に適しています。この記事では、glTFの最初の実用バージョンである1.0についての入門記事になります。<br>
+                この記事で概要を把握し、glTFファイルを使った制作と再生のワークフロー構築に役立ててください。<br>
+                （現在、glTF 2.0がリリースされていますが、それは今後、別記事にて解説します。）<br>
+　            </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <a href="https://www.khronos.org/gltf"><img src="https://dummyimage.com/250x250/6666FF/ffffff.png&text=glTF仕様"></a>
+            <div class="caption">
+              <h3><a href="https://www.khronos.org/gltf">glTFファイルフォーマットの公式ページ</a></h3>
+              <p>業界標準化団体Khronosが策定した、WebGLと親和性の高い３Dファイルフォーマット「glTF」の公式ページです。</p>
+              <p>glTFはスタティックなモデルだけでなく、スキニングアニメーションデータなども表現できる、非常に高機能なファイルフォーマットです。皆さんも是非導入を検討してみてください。</p>
+              <p>glTF仕様については、こちらの<a href="https://github.com/KhronosGroup/glTF/blob/master/specification/README.md">Githubページ</a>から確認が可能です。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="row">
+        <div class="col-md-12 segment">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <h2>シェーダーで遊ぶ</h2>
+              <p>GPU（グラフィックプロセッサ・いわゆるグラボ）において、それまでハードウェア（回路）実装だった頂点処理とピクセル処理は、ある時期を境に（GPU上の）ソフトウェア処理になり、プログラマブルシェーダーとして3D開発者たちに解放されました。
+                 それ以降、WebGLやOpenGLといった3D APIから少し離れて、それらプログラマブルシェーダーの処理のみに注目した技術ノウハウも確立され、成長してきました。
+                  ここでは、そんなプログラマブルシェーダーに特化した情報を扱います。 </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <a href="https://www.shadertoy.com"><img src="https://dummyimage.com/250x250/FF6666/ffffff.png&text=ShaderToy"></a>
+            <div class="caption">
+              <h3><a href="https://www.shadertoy.com">ShaderToy（シェーダー投稿・共有サービス）</a></h3>
+              <p>おそらく世界でも１、２を争うメジャーなシェーダー投稿・共有サービスがここです。</p>
+              <p>非常に技術レベルの高い人たちが腕を競っており、「本当にこれはWebGLで動いているのか」と目を疑うほどの素晴らしいデモにたくさん触れることができます。</p>
+              <p>そうした高度なデモサンプルを見て楽しむのもいいですが、それらのコードは複雑で、そこから学び取るのは難しいかもしれません。割とシンプルなデモから学ぶこともオススメです。</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <a href="http://glslsandbox.com"><img src="https://dummyimage.com/250x250/FF6666/ffffff.png&text=GLSLSandbox"></a>
+            <div class="caption">
+              <h3><a href="http://glslsandbox.com">GLSL Sandbox（シェーダー投稿・共有サービス）</a></h3>
+              <p>最も有名なWebGLライブラリ「Three.js」の作者であるMr.doob氏らが手がけたサービスです。</p>
+              <p>投稿が匿名性なのが特徴で、アカウント登録が必要ない分、手軽に試すことが可能です。</p>
+              <p>棲み分けとしては、ShaderToy が上級者揃い、GLSL Sandboxは中級・初心者でも参加しやすい（心理的に）、といったイメージかもしれません。</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <a href="https://www.vertexshaderart.com/"><img src="https://dummyimage.com/250x250/FF6666/ffffff.png&text=頂点シェーダ"></a>
+            <div class="caption">
+              <h3><a href="https://www.vertexshaderart.com/">vertexshaderart.com（頂点シェーダー投稿・共有サービス）</a></h3>
+              <p>シェーダー投稿・共有サービスの中でも、頂点シェーダーにフォーカスしたサイトがここです。</p>
+              <p>デモの見栄えにおいて、シェーディングだけではなく、形状の変化もまた重要な要素。このサイトでクールな頂点シェーダを学びましょう。</p>
+              <p>数々のサンプルを見て、「頂点シェーダメインでここまでできるの！？」とあなたもきっと驚かれることうけ合いです。</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <a href="https://ics.media/entry/5535"><img src="https://dummyimage.com/250x250/6666FF/ffffff.png&text=定番画像処理"></a>
+            <div class="caption">
+              <h3><a href="https://ics.media/entry/5535">WebGLで抑えておきたいシェーダーの定番画像処理8選</a></h3>
+              <p>ICS MEDIAというインタラクティブデザイン・Web技術の会社さんによる記事です。</p>
+              <p>非常にキャッチーな画像処理テクニックを、WebGLのフラグメントシェーダーで実現されています。</p>
+              <p>すべてのサンプルでコードが提示されていますので、即参考にすることができます。パラメーターを色々いじって、理解を深めていってください。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="../js/jquery-1.11.3.min.js"></script>
+
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="../js/bootstrap.js"></script>
+  </body>
+</html>
